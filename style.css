@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'Ridvena';
+    src: url('fonts/ridvena/Ridvena.ttf') format('truetype');
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    letter-spacing: .04em;
+    background-color: #f9b35d;
+    color: #333300;
+}
+
+h1 {
+    color: #6e77f9;
+}
+
+a {
+    color: #4d53ae;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #4d53ae;
+    text-decoration: underline;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 5px;
+    width: 80%;
+    max-width: 1120px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    background: #fff;
+    margin-top: 10px;
+}
+
+.headline {
+    grid-column: span 3;
+    padding: 10px 0 0 10px;
+    height: 20px;
+}
+
+main {
+    grid-column: span 3;
+    padding: 10px;
+}
+
+header, footer {
+    grid-column: span 3;
+    text-align: center;
+    height: 200px;
+}
+
+header {
+    background-color: #6e77f9;
+    color: #fff;
+}
+
+.header-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    height: 200px;
+    align-items: center;
+}
+
+.header-container .logo {
+    text-align: center;
+    grid-column: span 3;
+}
+
+.logo span {
+    font-family: 'Ridvena', fallback, sans-serif;
+    font-size: 6em;
+}
+
+/* navigation */
+nav {
+    background-color: #4d53ae;
+    grid-row-start: 2;
+    grid-column-start: 1;
+    grid-row-end: 3;
+    grid-column-end: 4;
+}
+.navigation {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    flex-direction: row;
+}
+.navigation li {
+    float: left;
+}
+.navigation a {
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 10px 10px;
+    text-decoration: none;
+    font-size: 0.7em;
+}
+.navigation li a:hover {
+    color: #4d53ae;
+    background-color: #f9f65d;
+}
+.navigation li .active {
+    color: #fff;
+    background-color: #f9b35d;
+}
+/* END navigation */
+
+footer {
+    background-color: #4d53ae;
+}
+footer p {
+    color: #fff;
+}
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+}
+
+/* contact form */
+.contact-form label,
+.contact-form input,
+.contact-form textarea {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+}
+.contact-form .form-control {
+    margin-bottom: 1em;
+}
+.contact-form textarea {
+    min-height: 10em;
+}
+.contact-form .form-control input,
+.contact-form .form-control textarea {
+    padding: 0.5em;
+}
+/* END contact form */

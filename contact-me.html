@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Contact Me</title>
+</head>
+<body>
+<section class="container">
+    <header>
+        <section class="header-container">
+            <div class="logo">
+                <span>Eldar`s Portfolio</span>
+            </div>
+        </section>
+    </header>
+    <nav>
+        <section class="nav-container">
+            <ul class="navigation">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about-me.html">About Me</a></li>
+                <li><a href="#">Skills</a></li>
+                <li><a href="#">Education</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="#">HTML Geolocation API</a></li>
+                <li><a href="#">Canvas</a></li>
+                <li><a href="#">Transition/Animation</a></li>
+                <li><a href="#">XMLHttpRequest</a></li>
+                <li><a href="#">Chat</a></li>
+                <li><a class="active" href="contact-me.html">Contact Me</a></li>
+            </ul>
+        </section>
+    </nav>
+    <section class="headline">
+        <h1>Contact Me</h1>
+    </section>
+    <main>
+        <p>Please feel free to <a href="mailto:balloons@example.com">send us an email🔗</a> if you would like to contact me.</p>
+        <br>
+        <section class="contact-form">
+            <form action="process.php" novalidate>
+                <div class="form-control">
+                    <label for="firstName">First name</label>
+                    <input id="firstName" type="text" name="First name" />
+                </div>
+                <div class="form-control">
+                    <label for="lastName">Last name</label>
+                    <input id="lastName" type="text" name="Last name" />
+                </div>
+                <div class="form-control">
+                    <label for="email">Email</label>
+                    <input id="email" type="email" name="Email" />
+                </div>
+                <div class="form-control">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="4" cols="50"></textarea>
+                </div>
+                <div class="form-control">
+                    <input type="submit" value="Submit" />
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <section class="footer-container">
+            <p>© <span id="footer-year-span">2024</span> Eldar's Portfolio.</p>
+            <p>Address: 123 Main St, Galway, Ireland | Phone: +123-456-7890 | Email: info@galwaytourism.ie</p>
+            <p>Website designed and developed within the course CMETB & RiBH Training by Eldar Sieitablaiev.</p>
+        </section>
+    </footer>
+</section>
+<script>
+    const form = document.querySelector('form');
+
+    // Add an event listener for form submission
+    form.addEventListener('submit', function(e) {
+        // Prevent form submission
+        e.preventDefault();
+
+        // Get form inputs
+        const firstName = document.getElementById('firstName');
+        const lastName = document.getElementById('lastName');
+        const email = document.getElementById('email');
+        const message = document.getElementById('message');
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        const showMessage = (message, color) => {
+            // const removeP = document.getElementsByName('p');
+            // removeP.remove();
+
+            const pElem = document.createElement('p');
+            pElem.className = 'form-validation-message';
+            pElem.textContent = message; // string
+            pElem.style.color = color; // red | green
+            form.parentNode.insertBefore(pElem, form.nextSibling);
+        }
+
+        const oldMessage = document.querySelector('.form-validation-message');
+        if(oldMessage) {
+            oldMessage.remove();
+        }
+
+        // Validate form inputs
+        if (firstName.value === '' || lastName.value === '' || email.value === '' || message.value === '') {
+            showMessage('Please fill in all fields.', 'red');
+        } else if(!emailPattern.test(email.value)) {
+            showMessage('Email is not valid', 'red');
+        } else {
+            showMessage('Form submitted successfully!', 'green');
+        }
+    });
+</script>
+<script src="main.js"></script>
+</body>
+</html>
