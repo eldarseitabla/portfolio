@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="components/gallery/gallery.css">
+    <title>Graphics</title>
+</head>
+<body>
+<section class="container">
+    <header>
+        <section class="header-container">
+            <div class="logo">
+                <span>Eldar`s Portfolio</span>
+            </div>
+        </section>
+    </header>
+    <nav>
+        <section class="nav-container">
+            <ul class="navigation">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about-me.html">About Me</a></li>
+                <li><a href="#">Geolocation</a></li>
+                <li><a href="#">Local Storage</a></li>
+                <li><a href="#">Animation</a></li>
+                <li><a class="active" href="graphics.html">Graphics</a></li>
+                <li><a href="#">HTTP Requests</a></li>
+                <li><a href="#">Online Chat</a></li>
+                <li><a href="contact-me.html">Contact Me</a></li>
+            </ul>
+        </section>
+    </nav>
+    <section class="headline">
+        <h1>Graphics</h1>
+    </section>
+    <main>
+        <section>
+            <section>
+                <article>
+                    <button type="button" class="collapsible">
+                        <strong>Image Gallery</strong>
+                    </button>
+                    <div class="content">
+                        <div class="image-gallery">
+                            <img id="img1" src="gallery-images/photo-1.jpg" alt="Photo 1" onclick="openModal(this);">
+                            <img id="img2" src="gallery-images/photo-2.png" alt="Photo 2" onclick="openModal(this);">
+                            <img id="img3" src="gallery-images/photo-3.jpg" alt="Photo 3" onclick="openModal(this);">
+                            <img id="img4" src="gallery-images/photo-4.jpg" alt="Photo 4" onclick="openModal(this);">
+                            <img id="img5" src="gallery-images/photo-5.jpg" alt="Photo 5" onclick="openModal(this);">
+                            <img id="img6" src="gallery-images/photo-6.jpg" alt="Photo 6" onclick="openModal(this);">
+                            <img id="img7" src="gallery-images/photo-7.jpg" alt="Photo 7" onclick="openModal(this);">
+                            <img id="img8" src="gallery-images/photo-8.png" alt="Photo 8" onclick="openModal(this);">
+                            <img id="img9" src="gallery-images/photo-9.jpg" alt="Photo 9" onclick="openModal(this);">
+                        </div>
+                        <div id="modal" class="modal">
+                            <span class="close" onclick="document.getElementById('modal').style.display='none'">&times;</span>
+                            <img src="#" class="modal-content" id="modalImage" alt="">
+                        </div>
+                    </div>
+                </article>
+            </section>
+            <br>
+            <section>
+                <article>
+                    <button type="button" class="collapsible">
+                        <strong>Canvas</strong>
+                    </button>
+                    <div class="content">
+                        <section>
+                            <button id="increase-speed">Increase Speed</button>
+                            <button id="decrease-speed">Decrease Speed</button>
+                            <br>
+                        </section>
+                        <canvas id="myCanvas" width="500" height="500" style="border:1px solid #d3d3d3;">
+                            Your browser does not support the HTML5 canvas tag.
+                        </canvas>
+                    </div>
+                </article>
+            </section>
+            <br>
+            <section>
+                <article>
+                    <button class="collapsible">
+                        <strong>CSS 3 effect</strong>
+                    </button>
+                    <div class="content">
+                        <p>Some text for section CSS 3 effect..</p>
+                    </div>
+                </article>
+            </section>
+        </section>
+    </main>
+    <footer>
+        <section class="footer-container">
+            <p>© <span id="footer-year-span">2024</span> Eldar's Portfolio.</p>
+            <p>Address: 123 Main St, Galway, Ireland | Phone: +123-456-7890 | Email: info@galwaytourism.ie</p>
+            <p>Website designed and developed within the course CMETB & RiBH Training by Eldar Sieitablaiev.</p>
+        </section>
+    </footer>
+</section>
+<script src="main.js"></script>
+<script src="components/gallery/gallery.js"></script>
+<script src="components/canvas.js"></script>
+</body>
+</html>

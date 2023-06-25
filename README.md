@@ -4,14 +4,22 @@ Within the course CMETB & RiBH Training - Software Development
 ## Checklist
 - [x] Home
 - [x] About Me
-- [ ] Skills
-- [ ] Education
-- [ ] Gallery
-- [ ] HTML Geolocation API
-- [ ] Canvas
-- [ ] Transition/Animation
-- [ ] XMLHttpRequest (also fetch and ajax on the same page)
-- [ ] Chat
+  - [ ] Skills
+  - [ ] Education
+- [ ] Geolocation
+- [ ] Local Storage
+- [ ] Animation
+  - [ ] Transition
+  - [ ] Animation
+- [ ] Graphics
+  - [x] Image Gallery
+  - [x] Canvas
+  - [ ] CSS 3 effect
+- [ ] HTTP Requests
+  - [ ] XMLHttpRequest
+  - [ ] Fetch
+  - [ ] Ajax
+- [ ] Online Chat
 - [x] Contact Me
 - [ ] Responsive
 
