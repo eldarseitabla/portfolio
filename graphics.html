@@ -6,6 +6,39 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="components/gallery/gallery.css">
     <title>Graphics</title>
+    <style>
+        .btn-transition-animation {
+            background-color: #008CBA;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            animation: pulse 3s infinite;
+        }
+
+        .btn-transition-animation:hover {
+            background-color: #4CAF50;
+            transform: scale(1.1);
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.5);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
 </head>
 <body>
 <section class="container">
@@ -82,10 +115,10 @@
             <section>
                 <article>
                     <button class="collapsible">
-                        <strong>CSS 3 effect</strong>
+                        <strong>CSS 3 effect - transition & animation</strong>
                     </button>
                     <div class="content">
-                        <p>Some text for section CSS 3 effect..</p>
+                        <button class="btn-transition-animation">Hover over me</button>
                     </div>
                 </article>
             </section>

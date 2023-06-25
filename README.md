@@ -11,10 +11,10 @@ Within the course CMETB & RiBH Training - Software Development
 - [ ] Animation
   - [ ] Transition
   - [ ] Animation
-- [ ] Graphics
+- [x] Graphics
   - [x] Image Gallery
   - [x] Canvas
-  - [ ] CSS 3 effect
+  - [x] CSS 3 effect
 - [ ] HTTP Requests
   - [ ] XMLHttpRequest
   - [ ] Fetch
