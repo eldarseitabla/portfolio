@@ -8,9 +8,9 @@ Within the course CMETB & RiBH Training - Software Development
   - [ ] Education
 - [ ] Geolocation
 - [ ] Local Storage
-- [ ] Animation
-  - [ ] Transition
-  - [ ] Animation
+- [x] Animation
+  - [x] Transition
+  - [x] Animation
 - [x] Graphics
   - [x] Image Gallery
   - [x] Canvas

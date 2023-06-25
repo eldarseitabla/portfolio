@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Animation</title>
+    <style>
+        .box-transition {
+            width: 300px;
+            height: 200px;
+            background-color: #008CBA;
+            color: white;
+            position: relative;
+            overflow: hidden;
+            transition: height 0.5s;
+        }
+
+        .text {
+            position: absolute;
+            bottom: 0;
+            height: 0;
+            width: 100%;
+            color: white;
+            background-color: rgba(0,0,0,0.7);
+            padding: 20px;
+            box-sizing: border-box;
+            transition: height 0.5s;
+        }
+
+        .box-transition:hover .text {
+            height: 100px;
+        }
+
+        /* ================================== */
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .box-animation {
+            width: 100px;
+            height: 100px;
+            margin: 50px auto;
+            background-color: #008CBA;
+            animation: rotate 4s linear infinite;
+        }
+    </style>
+</head>
+<body>
+<section class="container">
+    <header>
+        <section class="header-container">
+            <div class="logo">
+                <span>Eldar`s Portfolio</span>
+            </div>
+        </section>
+    </header>
+    <nav>
+        <section class="nav-container">
+            <ul class="navigation">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about-me.html">About Me</a></li>
+                <li><a href="#">Geolocation</a></li>
+                <li><a href="#">Local Storage</a></li>
+                <li><a href="animation.html">Animation</a></li>
+                <li><a class="active" href="graphics.html">Graphics</a></li>
+                <li><a href="#">HTTP Requests</a></li>
+                <li><a href="#">Online Chat</a></li>
+                <li><a href="contact-me.html">Contact Me</a></li>
+            </ul>
+        </section>
+    </nav>
+    <section class="headline">
+        <h1>Animation</h1>
+    </section>
+    <main>
+        <section>
+            <section>
+                <article>
+                    <button type="button" class="collapsible">
+                        <strong>Transition</strong>
+                    </button>
+                    <div class="content">
+                        <div class="box-transition">
+                            <div class="text">Hover over me!</div>
+                        </div>
+                    </div>
+                </article>
+            </section>
+            <section>
+                <article>
+                    <button type="button" class="collapsible">
+                        <strong>Animation</strong>
+                    </button>
+                    <div class="content">
+                        <div class="box-animation"></div>
+                    </div>
+                </article>
+            </section>
+        </section>
+    </main>
+    <footer>
+        <section class="footer-container">
+            <p>© <span id="footer-year-span">2024</span> Eldar's Portfolio.</p>
+            <p>Address: 123 Main St, Galway, Ireland | Phone: +123-456-7890 | Email: info@galwaytourism.ie</p>
+            <p>Website designed and developed within the course CMETB & RiBH Training by Eldar Sieitablaiev.</p>
+        </section>
+    </footer>
+</section>
+<script src="main.js"></script>
+</body>
+</html>
