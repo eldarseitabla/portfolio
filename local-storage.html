@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>About Me</title>
+    <title>Local Storage</title>
 </head>
 <body>
 <section class="container">
@@ -19,9 +19,9 @@
         <section class="nav-container">
             <ul class="navigation">
                 <li><a href="index.html">Home</a></li>
-                <li><a class="active" href="about-me.html">About Me</a></li>
+                <li><a href="about-me.html">About Me</a></li>
                 <li><a href="geolocation.html">Geolocation</a></li>
-                <li><a href="local-storage.html">Local Storage</a></li>
+                <li><a class="active" href="local-storage.html">Local Storage</a></li>
                 <li><a href="animation.html">Animation</a></li>
                 <li><a href="graphics.html">Graphics</a></li>
                 <li><a href="#">HTTP Requests</a></li>
@@ -31,18 +31,18 @@
         </section>
     </nav>
     <section class="headline">
-        <h1>About Me</h1>
+        <h1>Local Storage</h1>
     </section>
     <main>
-        <article style="text-align: center;">
-            <p>
-                With a positive through life, with the development in the heart,
-            </p>
-            <br>
-            <p>
-                I have a great passion for engineering, web and IT in general!
-            </p>
-            <br>
+        <article>
+            1. <input type="text" id="nameInput" placeholder="Enter your name" />
+            <br><br>
+            2. <button onclick="saveName()">Save Name to Local Storage</button>
+            <br><br>
+            3. Reload page
+            <br><br>
+            4. <button onclick="loadName()">Load Name from Local Storage</button>
+            <p id="nameOutput"></p>
         </article>
     </main>
     <footer>
@@ -54,5 +54,19 @@
     </footer>
 </section>
 <script src="main.js"></script>
+<script>
+    function saveName() {
+        const name = document.getElementById('nameInput').value;
+        localStorage.setItem('userName', name);
+    }
+    function loadName() {
+        const savedName = localStorage.getItem('userName');
+        if(savedName) {
+            document.getElementById('nameOutput').textContent = 'Saved name: ' + savedName;
+        } else {
+            document.getElementById('nameOutput').textContent = 'No name found in local storage.';
+        }
+    }
+</script>
 </body>
 </html>
