@@ -4,53 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Animation</title>
-    <style>
-        .box-transition {
-            width: 300px;
-            height: 200px;
-            background-color: #008CBA;
-            color: white;
-            position: relative;
-            overflow: hidden;
-            transition: height 0.5s;
-        }
-
-        .text {
-            position: absolute;
-            bottom: 0;
-            height: 0;
-            width: 100%;
-            color: white;
-            background-color: rgba(0,0,0,0.7);
-            padding: 20px;
-            box-sizing: border-box;
-            transition: height 0.5s;
-        }
-
-        .box-transition:hover .text {
-            height: 100px;
-        }
-
-        /* ================================== */
-
-        @keyframes rotate {
-            0% {
-                transform: rotate(0deg);
-            }
-            100% {
-                transform: rotate(360deg);
-            }
-        }
-
-        .box-animation {
-            width: 100px;
-            height: 100px;
-            margin: 50px auto;
-            background-color: #008CBA;
-            animation: rotate 4s linear infinite;
-        }
-    </style>
+    <title>HTTP Requests</title>
 </head>
 <body>
 <section class="container">
@@ -68,28 +22,35 @@
                 <li><a href="about-me.html">About Me</a></li>
                 <li><a href="geolocation.html">Geolocation</a></li>
                 <li><a href="local-storage.html">Local Storage</a></li>
-                <li><a class="active" href="animation.html">Animation</a></li>
+                <li><a href="animation.html">Animation</a></li>
                 <li><a href="graphics.html">Graphics</a></li>
-                <li><a href="http-requests.html">HTTP Requests</a></li>
+                <li><a class="active" href="http-requests.html">HTTP Requests</a></li>
                 <li><a href="#">Online Chat</a></li>
                 <li><a href="contact-me.html">Contact Me</a></li>
             </ul>
         </section>
     </nav>
     <section class="headline">
-        <h1>Animation</h1>
+        <h1>HTTP Requests</h1>
     </section>
     <main>
         <section>
             <section>
                 <article>
                     <button type="button" class="collapsible">
-                        <strong>Transition</strong>
+                        <strong>XMLHttpRequest</strong>
                     </button>
                     <div class="content">
-                        <div class="box-transition">
-                            <div class="text">Hover over me!</div>
-                        </div>
+                        <br>
+                        <button type="button" onclick="loadDoc()">Request Data</button>
+                        <br><br>
+                        <p>
+                            GET: <a target="_blank" href="https://jsonplaceholder.typicode.com/posts/1">https://jsonplaceholder.typicode.com/posts/1</a>
+                        </p>
+                        <br>
+                        <p>Result of request will here:</p>
+                        <p id="xml-http-request-demo" style="height: 125px">...</p>
+                        <br>
                     </div>
                 </article>
             </section>
@@ -97,10 +58,21 @@
             <section>
                 <article>
                     <button type="button" class="collapsible">
-                        <strong>Animation</strong>
+                        <strong>Fetch</strong>
                     </button>
                     <div class="content">
-                        <div class="box-animation"></div>
+
+                    </div>
+                </article>
+            </section>
+            <br>
+            <section>
+                <article>
+                    <button type="button" class="collapsible">
+                        <strong>Ajax</strong>
+                    </button>
+                    <div class="content">
+
                     </div>
                 </article>
             </section>
@@ -115,5 +87,19 @@
     </footer>
 </section>
 <script src="main.js"></script>
+<script>
+    function loadDoc() {
+        const xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function() {
+            if (this.readyState === 4 && this.status === 200) {
+                console.log('this.readyState', this.readyState);
+                console.log('this.status', this.status);
+                document.getElementById("xml-http-request-demo").innerText = this.responseText;
+            }
+        };
+        xhr.open("GET", "https://jsonplaceholder.typicode.com/posts/1", true);
+        xhr.send();
+    }
+</script>
 </body>
 </html>

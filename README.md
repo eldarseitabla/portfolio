@@ -16,10 +16,10 @@ Within the course CMETB & RiBH Training - Software Development
   - [x] Canvas
   - [x] CSS 3 effect
 - [ ] HTTP Requests
-  - [ ] XMLHttpRequest
+  - [x] XMLHttpRequest
   - [ ] Fetch
   - [ ] Ajax
 - [ ] Online Chat
 - [x] Contact Me
 - [ ] Responsive
-
+- [ ] Printable
