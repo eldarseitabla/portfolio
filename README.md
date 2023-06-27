@@ -6,7 +6,7 @@ Within the course CMETB & RiBH Training - Software Development
 - [x] About Me
   - [ ] Skills
   - [ ] Education
-- [ ] Geolocation
+- [x] Geolocation
 - [ ] Local Storage
 - [x] Animation
   - [x] Transition
