@@ -19,7 +19,7 @@ Within the course CMETB & RiBH Training - Software Development
   - [x] XMLHttpRequest
   - [x] Fetch
   - [x] Ajax
-- [ ] Online Chat
+- [x] Online Chat
 - [x] Contact Me
 - [ ] Responsive
 - [ ] Printable

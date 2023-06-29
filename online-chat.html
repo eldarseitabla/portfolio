@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="style.css">
     <title>Online Chat</title>
     <style>
         #messages {
-            list-style-image: url('/img/chat.png');
+            list-style-image: url('img/chat.png');
+            padding: 10px;
         }
     </style>
 </head>
@@ -23,15 +24,15 @@
     <nav>
         <section class="nav-container">
             <ul class="navigation">
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/about-me.html">About Me</a></li>
-                <li><a href="/geolocation.html">Geolocation</a></li>
-                <li><a href="/local-storage.html">Local Storage</a></li>
-                <li><a href="/animation.html">Animation</a></li>
-                <li><a href="/graphics.html">Graphics</a></li>
-                <li><a href="/http-requests.html">HTTP Requests</a></li>
-                <li><a class="active" href="/online-chat.html">Online Chat</a></li>
-                <li><a href="/contact-me.html">Contact Me</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about-me.html">About Me</a></li>
+                <li><a href="geolocation.html">Geolocation</a></li>
+                <li><a href="local-storage.html">Local Storage</a></li>
+                <li><a href="animation.html">Animation</a></li>
+                <li><a href="graphics.html">Graphics</a></li>
+                <li><a href="http-requests.html">HTTP Requests</a></li>
+                <li><a class="active" href="online-chat.html">Online Chat</a></li>
+                <li><a href="contact-me.html">Contact Me</a></li>
             </ul>
         </section>
     </nav>
@@ -40,6 +41,8 @@
     </section>
     <main>
         <article>
+            <strong>To use online chat you need clone repository and run 'npm start'</strong>
+            <p>GitHub Pages does not support server-side :(</p>
             <ul id="messages"></ul>
             <form action="">
                 <input id="m" autocomplete="off" /><button>Send</button>
@@ -54,7 +57,7 @@
         </section>
     </footer>
 </section>
-<script src="/main.js"></script>
+<script src="main.js"></script>
 <script src="/socket.io/socket.io.js"></script>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script>
