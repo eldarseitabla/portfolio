@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Online Chat</title>
+    <style>
+        #messages {
+            list-style-image: url('/img/chat.png');
+        }
+    </style>
+</head>
+<body>
+<section class="container">
+    <header>
+        <section class="header-container">
+            <div class="logo">
+                <span>Eldar`s Portfolio</span>
+            </div>
+        </section>
+    </header>
+    <nav>
+        <section class="nav-container">
+            <ul class="navigation">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/about-me.html">About Me</a></li>
+                <li><a href="/geolocation.html">Geolocation</a></li>
+                <li><a href="/local-storage.html">Local Storage</a></li>
+                <li><a href="/animation.html">Animation</a></li>
+                <li><a href="/graphics.html">Graphics</a></li>
+                <li><a href="/http-requests.html">HTTP Requests</a></li>
+                <li><a class="active" href="/online-chat.html">Online Chat</a></li>
+                <li><a href="/contact-me.html">Contact Me</a></li>
+            </ul>
+        </section>
+    </nav>
+    <section class="headline">
+        <h1>Online Chat</h1>
+    </section>
+    <main>
+        <article>
+            <ul id="messages"></ul>
+            <form action="">
+                <input id="m" autocomplete="off" /><button>Send</button>
+            </form>
+        </article>
+    </main>
+    <footer>
+        <section class="footer-container">
+            <p>© <span id="footer-year-span">2024</span> Eldar's Portfolio.</p>
+            <p>Address: 123 Main St, Galway, Ireland | Phone: +123-456-7890 | Email: info@galwaytourism.ie</p>
+            <p>Website designed and developed within the course CMETB & RiBH Training by Eldar Sieitablaiev.</p>
+        </section>
+    </footer>
+</section>
+<script src="/main.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script>
+    $(function () {
+        var socket = io();
+        $('form').submit(function(e) {
+            e.preventDefault();
+            socket.emit('chat message', $('#m').val());
+            $('#m').val('');
+            return false;
+        });
+        socket.on('chat message', function(msg) {
+            $('#messages').append($('<li>').text(msg));
+            window.scrollTo(0, document.body.scrollHeight);
+        });
+    });
+</script>
+</body>
+</html>
