@@ -10,7 +10,9 @@
     "express": "^4.18.2",
     "socket.io": "^4.7.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
@@ -24,5 +26,5 @@
   "bugs": {
     "url": "https://github.com/eldarseitabla/portfolio/issues"
   },
-  "homepage": "https://github.com/eldarseitabla/portfolio#readme"
+  "homepage": "https://eldarseitabla.github.io/portfolio"
 }
