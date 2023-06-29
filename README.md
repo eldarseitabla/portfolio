@@ -4,8 +4,6 @@ Within the course CMETB & RiBH Training - Software Development
 ## Checklist
 - [x] Home
 - [x] About Me
-  - [ ] Skills
-  - [ ] Education
 - [x] Geolocation
 - [x] Local Storage
 - [x] Animation
@@ -23,3 +21,8 @@ Within the course CMETB & RiBH Training - Software Development
 - [x] Contact Me
 - [x] Responsive
 - [x] Printable
+
+## To run server
+```bash
+npm start
+```

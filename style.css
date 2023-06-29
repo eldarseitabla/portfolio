@@ -176,6 +176,14 @@ footer p {
     background-color: #f1f1f1;
 }
 
+.note {
+    background-color: pink;
+    opacity: 70%;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+}
+
 @media (max-width: 1300px) {
     .home-row {
         display: block;
