@@ -24,5 +24,6 @@ Within the course CMETB & RiBH Training - Software Development
 
 ## To run server
 ```bash
+npm install
 npm start
 ```
