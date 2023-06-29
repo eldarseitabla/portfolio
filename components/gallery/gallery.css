@@ -48,3 +48,50 @@
     text-decoration: none;
     cursor: pointer;
 }
+
+@media (max-width: 821px) {
+    .image-gallery img {
+        max-width: 45%;
+    }
+    .modal-content {
+        width: 90%;
+        max-width: 400px;
+    }
+    .close {
+        font-size: 30px;
+        top: 10px;
+        right: 25px;
+    }
+}
+
+/* Styles for tablets */
+@media (max-width: 768px) {
+    .image-gallery img {
+        max-width: 100%;
+    }
+    .modal-content {
+        width: 90%;
+        max-width: 400px;
+    }
+    .close {
+        font-size: 30px;
+        top: 10px;
+        right: 25px;
+    }
+}
+
+/* Styles for phones */
+@media (max-width: 414px) {
+    .image-gallery img {
+        max-width: 90%;
+    }
+    .modal-content {
+        width: 95%;
+        max-width: 300px;
+    }
+    .close {
+        font-size: 20px;
+        top: 5px;
+        right: 15px;
+    }
+}

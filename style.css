@@ -175,3 +175,100 @@ footer p {
     transition: max-height 0.2s ease-out;
     background-color: #f1f1f1;
 }
+
+@media (max-width: 1300px) {
+    .home-row {
+        display: block;
+        flex-direction: column;
+    }
+
+    .home-row img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Tablet styles */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: unset;
+    }
+
+    header, footer, nav {
+        grid-column: span 2;
+    }
+
+    nav {
+        grid-column: span 2;
+    }
+
+    .navigation a {
+        border: #333300 solid 1px;
+        margin: 1px;
+    }
+    .list-items {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .logo span {
+        font-size: 5em;
+    }
+}
+
+/* Mobile styles */
+@media (max-width: 414px) {
+    .container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    header, footer, nav {
+        grid-column: span 1;
+    }
+
+    .logo span {
+        font-size: 3em;
+    }
+
+    .navigation {
+        flex-direction: column;
+    }
+
+    .navigation li {
+        float: none;
+    }
+    .list-items {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-form label,
+    .contact-form input,
+    .contact-form textarea {
+        display: flex;
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media print {
+    body, .container {
+        background-color: white;
+        color: black;
+    }
+
+    header {
+        display: none;
+    }
+
+    a {
+        color: blue;  /* typically, links are blue in print */
+    }
+
+    nav, footer {
+        display: none;
+    }
+
+    main {
+        display: block;  /* This will make the HTML and CSS articles sit one on top of the other */
+    }
+}

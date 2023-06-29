@@ -21,5 +21,5 @@ Within the course CMETB & RiBH Training - Software Development
   - [x] Ajax
 - [x] Online Chat
 - [x] Contact Me
-- [ ] Responsive
-- [ ] Printable
+- [x] Responsive
+- [x] Printable
